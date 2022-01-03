@@ -2,8 +2,9 @@ site_name: obsidian-mkdocs template
 
 theme:
     name: 'material'
+    language: "ja"
+    custom_dir: overrides
     palette:
-
     # Light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
@@ -39,5 +40,8 @@ markdown_extensions:
       permalink: true
 
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+      prebuild_index: true
   - roamlinks 
